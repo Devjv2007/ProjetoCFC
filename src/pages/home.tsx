@@ -1,39 +1,10 @@
-import { useEffect, useState, useRef } from "react";
-
-function useScrollAnimation() {
-  const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
-
-  return [ref, isVisible];
-}
+import Contador from "../components/Contador";
+import useScrollAnimation from "../hooks/useScrollAnimation";
 
 export default function CFCGrupoG6() {
   const whatsappNumber = "5515991047579";
   const whatsappMsg = "Olá! Gostaria de mais informações sobre os cursos e agendamento.";
-  const phoneNumber = "5515991047579";
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+
 
   const [cursosRef, cursosVisible] = useScrollAnimation();
   const [servicosRef, servicosVisible] = useScrollAnimation();
@@ -41,168 +12,83 @@ export default function CFCGrupoG6() {
   const [porqueRef, porqueVisible] = useScrollAnimation();
   const [ctaRef, ctaVisible] = useScrollAnimation();
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
-      <header
-        className={[
-          "fixed inset-x-0 top-0 z-50",
-          scrolled ? "bg-white backdrop-blur shadow-sm" : "bg-white",
-          "transition-[background-color,opacity] duration-200 ease-out"
-        ].join(" ")}
-      >
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center gap-4 relative">
-            <div className="flex items-center gap-4">
-              <img src="/grupocfc.jpg" alt="CFC Grupo G6" className="w-16 h-16 rounded-full" />
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">CFC Grupo G6</h1>
-                <p className="text-sm text-gray-600">Centro de Formação de Condutores</p>
-              </div>
-            </div>
-
-            <div className="flex-1" />
-
-            <nav className="hidden md:flex items-center gap-6">
-              <a href="#cursos" className="hover:text-blue-700 transition-colors">Cursos</a>
-              <a href="#servicos" className="hover:text-blue-700 transition-colors">Serviços</a>
-              <a href="#depoimentos" className="hover:text-blue-700 transition-colors">Depoimentos</a>
-              <a href="#porque" className="hover:text-blue-700 transition-colors">Porque</a>
-              <a href="#contato" className="hover:text-blue-700 transition-colors">Contato</a>
-            </nav>
-
-            <div className="hidden md:flex">
-              <a
-                href={`https://wa.me/${whatsappNumber}`}
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
-              >
-                WhatsApp
-              </a>
-            </div>
-
-            <button
-              aria-label="Abrir menu"
-              aria-controls="mobile-menu"
-              aria-expanded={open}
-              onClick={() => setOpen((s) => !s)}
-              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700"
-            >
-              {open ? (
-                <svg className="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-
-            {open && (
-              <button
-                onClick={() => setOpen(false)}
-                aria-label="Fechar menu"
-                className="fixed inset-0 z-40 bg-black/10 md:hidden"
-              />
-            )}
-
-           <div
-            id="mobile-menu"
-            className={[
-              "fixed left-0 right-0 top-20 z-50 md:hidden",
-              "transform origin-top transition-[opacity,transform] duration-200 ease-out",
-              open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
-            ].join(" ")}
-          >
-            <nav className="rounded-b-lg border-t bg-white shadow-lg">
-              <ul className="flex flex-col">
-                <li><a onClick={() => setOpen(false)} href="#cursos" className="block px-4 py-3 hover:bg-slate-50">Cursos</a></li>
-                <li><a onClick={() => setOpen(false)} href="#servicos" className="block px-4 py-3 hover:bg-slate-50">Serviços</a></li>
-                <li><a onClick={() => setOpen(false)} href="#depoimentos" className="block px-4 py-3 hover:bg-slate-50">Depoimentos</a></li>
-                <li><a onClick={() => setOpen(false)} href="#porque" className="block px-4 py-3 hover:bg-slate-50">Porque</a></li>
-                <li><a onClick={() => setOpen(false)} href="#contato" className="block px-4 py-3 hover:bg-slate-50">Contato</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
 
       <div className="h-20 md:h-[84px]" />
       
-      <section id="inicio" className="relative min-h-[640px] md:min-h-[720px] overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://wp-h.aprovadetran.com.br/aprendendo-a-dirigir-autoescola/')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-blue-800/30 to-blue-700/25 backdrop-brightness-105" />
+   <section id="inicio" className="relative min-h-[640px] md:min-h-[720px] overflow-hidden">
+  <div
+    aria-hidden="true"
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url('https://wp-h.aprovadetran.com.br/aprendendo-a-dirigir-autoescola/')",
+    }}
+  />
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-blue-800/30 to-blue-700/25 backdrop-brightness-105" />
 
-        <div className="relative">
-          <div className="container mx-auto px-4 py-20 md:py-28">
-            <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1 text-xs md:text-sm text-blue-100">
-                CNH com suporte humano e horários flexíveis
-              </div>
-
-              <h1
-                className="mt-4 font-extrabold leading-tight tracking-tight text-white"
-                style={{ fontSize: "clamp(2rem, 5vw, 3.75rem)" }}
-              >
-                Qualidade e confiança na formação de motoristas
-              </h1>
-
-              <p className="mt-4 max-w-2xl text-blue-100 md:text-lg">
-                Há 18 anos formando condutores conscientes e preparados em Sorocaba, com credenciamento completo no DETRAN e equipe experiente.
-              </p>
-
-              <div className="mt-8 flex flex-wrap gap-4 text-white">
-                <div className="rounded-lg bg-white/10 backdrop-blur-md px-6 py-4">
-                  <p className="text-3xl font-extrabold">10.000+</p>
-                  <p className="text-sm text-blue-100">Alunos formados</p>
-                </div>
-                <div className="rounded-lg bg-white/10 backdrop-blur-md px-6 py-4">
-                  <p className="text-3xl font-extrabold">18</p>
-                  <p className="text-sm text-blue-100">Anos de tradição</p>
-                </div>
-                <div className="rounded-lg bg-white/10 backdrop-blur-md px-6 py-4">
-                  <p className="text-3xl font-extrabold">100%</p>
-                  <p className="text-sm text-blue-100">Credenciado DETRAN</p>
-                </div>
-              </div>
-
-              <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <a
-                  href="#contato"
-                  className="inline-flex items-center justify-center rounded-lg bg-red-600 px-8 py-4 font-bold text-white shadow-xl transition hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-400 focus-visible:ring-offset-blue-900"
-                >
-                  Agendar sua aula
-                </a>
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá! Quero saber sobre os cursos do CFC G6.")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-8 py-4 font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-blue-900"
-                >
-                  Falar no WhatsApp
-                </a>
-              </div>
-
-              <p className="mt-6 text-sm text-blue-100">Endereço: Leopoldo Machado, 40 — Sorocaba/SP</p>
-            </div>
-          </div>
+  <div className="relative">
+    <div className="container mx-auto px-4 py-20 md:py-28">
+      <div className="max-w-4xl">
+        <div className="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1 text-xs md:text-sm text-blue-100">
+          CNH com suporte humano e horários flexíveis
         </div>
-      </section>
 
+        <h1
+          className="mt-4 font-extrabold leading-tight tracking-tight text-white"
+          style={{ fontSize: "clamp(2rem, 5vw, 3.75rem)" }}
+        >
+          Qualidade e confiança na formação de motoristas
+        </h1>
+
+        <p className="mt-4 max-w-2xl text-blue-100 md:text-lg">
+          Há 18 anos formando condutores conscientes e preparados em Sorocaba, com credenciamento completo no DETRAN e equipe experiente.
+        </p>
+
+
+       <div className="mt-8 flex gap-2 text-white flex-nowrap overflow-x-auto no-scrollbar">
+        <div className="rounded-lg bg-white/10 backdrop-blur-md px-4 py-4 min-w-[140px] text-center flex-shrink-0">
+          <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
+            <Contador to={10000} suffix="+" />
+          </p>
+          <p className="text-sm text-blue-100">Alunos formados</p>
+        </div>
+        <div className="rounded-lg bg-white/10 backdrop-blur-md px-3 py-4 min-w-[140px] text-center flex-shrink-0">
+          <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
+            <Contador to={100} suffix="%" />
+          </p>
+          <p className="text-sm text-blue-100">Credenciado DETRAN</p>
+        </div>
+        <div className="rounded-lg bg-white/10 backdrop-blur-md px-1 py-4 min-w-[140px] text-center flex-shrink-0">
+          <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
+            <Contador to={18} suffix="+" />
+          </p>
+          <p className="text-sm text-blue-100">Anos de tradição</p>
+        </div>
+      </div>
+
+
+        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+     
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá! Quero saber sobre os cursos do CFC G6.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-41 py-4 font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-blue-900"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+
+        <p className="mt-6 text-sm text-blue-100">Endereço: Leopoldo Machado, 40 — Sorocaba/SP</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
       <section
         ref={cursosRef}
         id="cursos"
@@ -432,7 +318,7 @@ export default function CFCGrupoG6() {
               <article className="group flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition overflow-hidden">
                 <div className="relative h-48">
                   <img
-                    src="https://acdn-us.mitiendanube.com/stores/002/501/128/products/renovacao-de-cnh-210482e8ea190e6e5017564029857972-480-0.webp"
+                    src="renovação de cnh.jpg"
                     alt="Renovação de CNH"
                     className="h-full w-full object-cover "
                   />
@@ -532,7 +418,7 @@ export default function CFCGrupoG6() {
                   <img
                     src="Depoimento1.png"
                     alt="Depoimento 1"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-55 "
                   />
                 </div>
               </article>
@@ -540,9 +426,9 @@ export default function CFCGrupoG6() {
               <article className="relative rounded-3xl overflow-hidden shadow-xl  p-2">
                 <div className="rounded-2xl overflow-hidden">
                   <img
-                    src="Depoimento1.png"
+                    src="Depoimento2.jpg"
                     alt="Depoimento 2"
-                    className="w-full h-auto"
+                    className="w-full h-55"
                   />
                 </div>
               </article>
@@ -550,9 +436,9 @@ export default function CFCGrupoG6() {
               <article className="relative rounded-3xl overflow-hidden shadow-xl  p-2">
                 <div className="rounded-2xl overflow-hidden">
                   <img
-                    src="Depoimento1.png"
+                    src="Depoimento3.jpg"
                     alt="Depoimento 3"
-                    className="w-full h-auto"
+                    className="w-full h-55"
                   />
                 </div>
               </article>
@@ -560,9 +446,9 @@ export default function CFCGrupoG6() {
               <article className="relative rounded-3xl overflow-hidden shadow-xl  p-2">
                 <div className="rounded-2xl overflow-hidden">
                   <img
-                    src="Depoimento1.png"
+                    src="Depoimento4.jpg"
                     alt="Depoimento 4"
-                    className="w-full h-auto"
+                    className="w-full h-55"
                   />
                 </div>
               </article>
@@ -704,12 +590,6 @@ export default function CFCGrupoG6() {
                   >
                     Falar no WhatsApp
                   </a>
-                  <a
-                    href={`tel:${phoneNumber}`}
-                    className="inline-flex items-center gap-2 rounded-lg border border-white/70 bg-transparent px-6 py-3 font-semibold text-white transition hover:bg-white/10"
-                  >
-                    Ligar Agora
-                  </a>
                 </div>
 
                 <div className="mt-6 flex items-center justify-center gap-2 text-sm text-blue-100">
@@ -724,41 +604,6 @@ export default function CFCGrupoG6() {
           </div>
         </div>
       </section>
-
-      <footer className="bg-gray-50 border-t border-gray-300 py-8">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:justify-between items-center gap-6">
-          <div className="flex items-center space-x-4 flex-shrink-0">
-            <img src="/grupocfc.jpg" alt="Logo Grupo G6" className="w-16 h-16 rounded-full shadow" />
-            <div>
-              <h4 className="font-bold text-lg text-slate-900">CFC Grupo G6</h4>
-              <p className="text-sm text-slate-600">Centro de Formação de Condutores</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="flex items-center space-x-2 flex-shrink-0">
-              <i className="ri-time-line text-lg" />
-              <span className="text-sm text-slate-600">Segunda a Sexta 8h às 18h</span>
-            </div>
-            
-            <div className="flex space-x-4 flex-shrink-0">
-              <a href="https://instagram.com/cfc_g6" target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-xl shadow hover:shadow-lg transition">
-                <i className="ri-instagram-line text-2xl text-slate-700" />
-              </a>
-              <a href="https://www.google.com/maps/search/?api=1&query=Leopoldo+Machado+40+Sorocaba" target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-xl shadow hover:shadow-lg transition">
-                <i className="ri-map-pin-line text-2xl text-slate-700" />
-              </a>
-              <a href="https://wa.me/5515991047579" target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-xl shadow hover:shadow-lg transition">
-                <i className="ri-whatsapp-line text-2xl text-slate-700" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-6 border-t border-gray-300 pt-4 text-center text-xs text-slate-500">
-          © 2025 CFC Grupo G6 — Todos os direitos reservados.
-        </div>
-      </footer>
     </div>
   );
 }
