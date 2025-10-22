@@ -1,4 +1,3 @@
-import Contador from "../components/Contador";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 
 export default function CFCGrupoG6() {
@@ -46,38 +45,43 @@ export default function CFCGrupoG6() {
        <div className="mt-8 flex gap-2 text-white flex-nowrap overflow-x-auto no-scrollbar">
         <div className="rounded-lg bg-white/10 backdrop-blur-md px-4 py-4 min-w-[140px] text-center flex-shrink-0">
           <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
-            <Contador to={10000} suffix="+" />
+            1000+
           </p>
           <p className="text-sm text-blue-100">Alunos formados</p>
         </div>
         <div className="rounded-lg bg-white/10 backdrop-blur-md px-3 py-4 min-w-[140px] text-center flex-shrink-0">
           <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
-            <Contador to={100} suffix="%" />
+            100%
           </p>
           <p className="text-sm text-blue-100">Credenciado DETRAN</p>
         </div>
         <div className="rounded-lg bg-white/10 backdrop-blur-md px-1 py-4 min-w-[140px] text-center flex-shrink-0">
           <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
-            <Contador to={20} suffix="+" />
+            20+
           </p>
           <p className="text-sm text-blue-100">Anos de tradição</p>
         </div>
       </div>
 
-
-        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-     
+        <div className="mt-16 flex flex-col items-start gap-4 w-[470px]">
           <a
             href={`https://api.whatsapp.com/send/?phone=1532243868&text=Ol%C3%A1%21+Quero%20saber%20sobre%20os%20cursos%20do%20CFC%20G6.%20Vim%20pelo%20site.&type=phone_number&app_absent=0`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-41 py-4 font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-blue-900"
+            className="w-full inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-12 py-4 font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-blue-900"
           >
             Falar no WhatsApp
           </a>
-        </div>
 
-        <p className="mt-6 text-sm text-blue-100">Endereço: Leopoldo Machado, 40 — Sorocaba/SP</p>
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=Leopoldo+Machado+40+Sorocaba`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center rounded-lg border border-white/70 bg-blue-500 px-12 py-4 font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-blue-900"
+          >
+            Nosso Endereço
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -231,7 +235,7 @@ export default function CFCGrupoG6() {
                   <img
                     src="Depoimento1.png"
                     alt="Depoimento 1"
-                    className="w-full h-55 "
+                    className="w-full h-auto md:h-50 "
                   />
                 </div>
               </article>
@@ -241,7 +245,7 @@ export default function CFCGrupoG6() {
                   <img
                     src="Depoimento2.jpg"
                     alt="Depoimento 2"
-                    className="w-full h-55"
+                    className="w-full h-auto md:h-50"
                   />
                 </div>
               </article>
@@ -251,7 +255,7 @@ export default function CFCGrupoG6() {
                   <img
                     src="Depoimento3.jpg"
                     alt="Depoimento 3"
-                    className="w-full h-55"
+                    className="w-full h-auto md:h-50"
                   />
                 </div>
               </article>
@@ -261,7 +265,7 @@ export default function CFCGrupoG6() {
                   <img
                     src="Depoimento4.jpg"
                     alt="Depoimento 4"
-                    className="w-full h-55"
+                    className="w-full h-auto md:h-50"
                   />
                 </div>
               </article>
