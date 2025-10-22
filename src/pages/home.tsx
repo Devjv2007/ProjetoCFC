@@ -68,7 +68,7 @@ export default function CFCGrupoG6() {
             href={`https://api.whatsapp.com/send/?phone=1532243868&text=Ol%C3%A1%21+Quero%20saber%20sobre%20os%20cursos%20do%20CFC%20G6.%20Vim%20pelo%20site.&type=phone_number&app_absent=0`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-12 py-4 font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-blue-900"
+            className="w-full inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-12 py-4 font-semibold text-white transition hover:bg-white/10"
           >
             Falar no WhatsApp
           </a>
@@ -77,7 +77,7 @@ export default function CFCGrupoG6() {
             href={`https://www.google.com/maps/search/?api=1&query=Leopoldo+Machado+40+Sorocaba`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center rounded-lg border border-white/70 bg-blue-500 px-12 py-4 font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-blue-900"
+            className="w-full inline-flex items-center justify-center rounded-lg  bg-blue-500 px-12 py-4 font-semibold text-white transition hover:bg-blue-600"
           >
             Nosso Endereço
           </a>
