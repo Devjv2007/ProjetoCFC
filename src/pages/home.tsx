@@ -2,11 +2,6 @@ import Contador from "../components/Contador";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 
 export default function CFCGrupoG6() {
-  const whatsappNumber = "5515991047579";
-  const whatsappMsg = "Olá! Gostaria de mais informações sobre os cursos e agendamento.";
-
-
-  const [cursosRef, cursosVisible] = useScrollAnimation();
   const [servicosRef, servicosVisible] = useScrollAnimation();
   const [depoimentosRef, depoimentosVisible] = useScrollAnimation();
   const [porqueRef, porqueVisible] = useScrollAnimation();
@@ -24,7 +19,7 @@ export default function CFCGrupoG6() {
     className="absolute inset-0 bg-cover bg-center"
     style={{
       backgroundImage:
-        "url('https://wp-h.aprovadetran.com.br/aprendendo-a-dirigir-autoescola/')",
+        "url('/image.png')",
     }}
   />
   <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-blue-800/30 to-blue-700/25 backdrop-brightness-105" />
@@ -43,8 +38,8 @@ export default function CFCGrupoG6() {
           Qualidade e confiança na formação de motoristas
         </h1>
 
-        <p className="mt-4 max-w-2xl text-blue-100 md:text-lg">
-          Há 18 anos formando condutores conscientes e preparados em Sorocaba, com credenciamento completo no DETRAN e equipe experiente.
+        <p className="mt-4 max-w-2xl text-white md:text-lg">
+          Há mais de 20 anos formando condutores conscientes e preparados em Sorocaba, com credenciamento completo no DETRAN e equipe experiente.
         </p>
 
 
@@ -63,7 +58,7 @@ export default function CFCGrupoG6() {
         </div>
         <div className="rounded-lg bg-white/10 backdrop-blur-md px-1 py-4 min-w-[140px] text-center flex-shrink-0">
           <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
-            <Contador to={18} suffix="+" />
+            <Contador to={20} suffix="+" />
           </p>
           <p className="text-sm text-blue-100">Anos de tradição</p>
         </div>
@@ -73,7 +68,7 @@ export default function CFCGrupoG6() {
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
      
           <a
-            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá! Quero saber sobre os cursos do CFC G6.")}`}
+            href={`https://api.whatsapp.com/send/?phone=1532243868&text=Ol%C3%A1%21+Quero%20saber%20sobre%20os%20cursos%20do%20CFC%20G6.%20Vim%20pelo%20site.&type=phone_number&app_absent=0`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-41 py-4 font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-blue-900"
@@ -87,188 +82,6 @@ export default function CFCGrupoG6() {
     </div>
   </div>
 </section>
-
-      
-      <section
-        ref={cursosRef}
-        id="cursos"
-        className={[
-          "scroll-mt-24 md:scroll-mt-28 py-16 md:py-20 bg-white transition-all duration-1000",
-          cursosVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        ].join(" ")}
-      >
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-7xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900">
-                Nossos 
-                <span className="text-3xl md:text-5xl font-extrabold text-blue-700"> Cursos</span>
-              </h2>
-              <p className="mt-3 text-slate-600 max-w-2xl mx-auto">
-                Oferecemos cursos completos para todas as categorias de habilitação, com instrutores qualificados e estrutura moderna.
-              </p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <article className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-shadow">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-                  <i className="ri-car-line text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Primeira Habilitação
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  Curso completo para quem vai tirar a CNH pela primeira vez. Categorias A, B ou AB.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Aulas teóricas e práticas
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Material didático incluso
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Horários flexíveis
-                  </li>
-                </ul>
-              </article>
-
-              <article className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-shadow">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 text-green-600">
-                  <i className="ri-add-circle-line text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Adição de Categoria
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  Adicione uma nova categoria à sua CNH existente. De A para AB ou B para AB.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Processo simplificado
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Aulas práticas focadas
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Acompanhamento personalizado
-                  </li>
-                </ul>
-              </article>
-
-              <article className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-shadow">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-purple-50 text-purple-600">
-                  <i className="ri-refresh-line text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Mudança de Categoria
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  Troca de categoria C, D ou E para conduzir veículos de maior porte.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Veículos adequados
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Instrutores especializados
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Preparação completa
-                  </li>
-                </ul>
-              </article>
-
-              <article className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-shadow">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-orange-600">
-                  <i className="ri-book-open-line text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Reciclagem
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  Curso obrigatório para condutores que tiveram a CNH suspensa ou cassada.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Turmas regulares
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Material atualizado
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Certificado reconhecido
-                  </li>
-                </ul>
-              </article>
-
-              <article className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-shadow">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-50 text-red-600">
-                  <i className="ri-file-list-line text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Renovação de CNH
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  Renove sua habilitação vencida ou próxima do vencimento com rapidez e facilidade.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Atendimento ágil
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Agendamento de exames
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Suporte completo
-                  </li>
-                </ul>
-              </article>
-
-              <article className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-shadow">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-600">
-                  <i className="ri-steering-2-line text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Aulas Avulsas
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  Aulas extras de direção para quem já tem habilitação mas quer praticar mais.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-600 mb-6">
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Flexibilidade total
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Treino personalizado
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <i className="ri-check-line text-green-600" />
-                    Recupere a confiança
-                  </li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section
         ref={servicosRef}
@@ -305,7 +118,7 @@ export default function CFCGrupoG6() {
 
                 <div className="flex flex-1 flex-col p-6">
                   <ul className="space-y-2 text-sm text-slate-700">
-                    {["Instrutores qualificados","Veículos modernos e seguros","Simulados preparatórios"].map((b)=>(
+                    {["Instrutores qualificados","Material didático e específico","Simulados preparatórios"].map((b)=>(
                       <li key={b} className="flex items-start gap-2">
                         <svg className="mt-0.5 h-4 w-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                         {b}
@@ -479,18 +292,6 @@ export default function CFCGrupoG6() {
           <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
             <article className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7 shadow-sm hover:shadow-md transition">
               <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-700">
-                <i className="ri-shield-check-line text-2xl" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-slate-900">
-                Segurança Garantida
-              </h3>
-              <p className="mt-1.5 text-sm text-slate-600">
-                Veículos modernos com todos os equipamentos de segurança.
-              </p>
-            </article>
-
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7 shadow-sm hover:shadow-md transition">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-700">
                 <i className="ri-user-star-line text-2xl" />
               </div>
               <h3 className="text-lg md:text-xl font-bold text-slate-900">
@@ -503,37 +304,13 @@ export default function CFCGrupoG6() {
 
             <article className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7 shadow-sm hover:shadow-md transition">
               <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-700">
-                <i className="ri-time-line text-2xl" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-slate-900">
-                Horários Flexíveis
-              </h3>
-              <p className="mt-1.5 text-sm text-slate-600">
-                Aulas nos horários que melhor se adequam à sua rotina.
-              </p>
-            </article>
-
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7 shadow-sm hover:shadow-md transition">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-700">
                 <i className="ri-thumb-up-line text-2xl" />
               </div>
               <h3 className="text-lg md:text-xl font-bold text-slate-900">
                 Alta Aprovação
               </h3>
               <p className="mt-1.5 text-sm text-slate-600">
-                95% de aprovação nos exames práticos e teóricos.
-              </p>
-            </article>
-
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7 shadow-sm hover:shadow-md transition">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-700">
-                <i className="ri-car-line text-2xl" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-slate-900">
-                Frota Moderna
-              </h3>
-              <p className="mt-1.5 text-sm text-slate-600">
-                Veículos novos e bem mantidos para seu conforto.
+                95% de aprovação nos exames teóricos.
               </p>
             </article>
 
@@ -545,9 +322,10 @@ export default function CFCGrupoG6() {
                 Tradição e Credibilidade
               </h3>
               <p className="mt-1.5 text-sm text-slate-600">
-                18 anos formando condutores responsáveis.
+                Há mais de 20 anos formando condutores responsáveis.
               </p>
             </article>
+
           </div>
         </div>
       </section>
@@ -583,7 +361,7 @@ export default function CFCGrupoG6() {
 
                 <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                   <a
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`}
+                    href={`https://api.whatsapp.com/send/?phone=1532243868&text=Ol%C3%A1%21+Quero%20saber%20sobre%20os%20cursos%20do%20CFC%20G6.%20Vim%20pelo%20site.&type=phone_number&app_absent=0`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-blue-900 shadow-lg transition hover:shadow-xl"

@@ -4,7 +4,7 @@ type HeaderProps = {
   whatsappNumber: string;
 };
 
-export default function Header({ whatsappNumber }: HeaderProps) {
+export default function Header({ }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -34,21 +34,20 @@ export default function Header({ whatsappNumber }: HeaderProps) {
           </div>
           <div className="flex-1" />
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#cursos" className="hover:text-blue-700 transition-colors">Cursos</a>
             <a href="#servicos" className="hover:text-blue-700 transition-colors">Serviços</a>
             <a href="#depoimentos" className="hover:text-blue-700 transition-colors">Depoimentos</a>
             <a href="#porque" className="hover:text-blue-700 transition-colors">Porque</a>
             <a href="#contato" className="hover:text-blue-700 transition-colors">Contato</a>
           </nav>
           <div className="hidden md:flex">
-            <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá! Quero saber sobre os cursos do CFC G6.")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
-            >
-              WhatsApp
-            </a>
+        <a
+            href={`https://api.whatsapp.com/send/?phone=1532243868&text=Ol%C3%A1%21+Quero%20saber%20sobre%20os%20cursos%20do%20CFC%20G6.%20Vim%20pelo%20site.&type=phone_number&app_absent=0`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+          >
+            WhatsApp
+        </a>
           </div>
           <button
             aria-label="Abrir menu"
