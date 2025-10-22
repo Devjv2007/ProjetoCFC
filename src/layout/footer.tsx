@@ -1,7 +1,6 @@
 export default function Footer() {
   return (
     <>
-      {/* FOOTER DESKTOP (MD+) */}
       <footer className="bg-gray-50 border-t border-gray-300 py-8 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:justify-between items-center gap-6">
           <div className="flex items-center space-x-4 flex-shrink-0">
@@ -14,7 +13,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex items-center space-x-2 flex-shrink-0">
               <i className="ri-time-line text-lg" />
-              <span className="text-sm text-slate-600">Segunda a Sexta 8h às 18h</span>
+              <span className="text-sm text-slate-600">Segunda a Sexta 9h às 18h</span>
             </div>
             <div className="flex space-x-4 flex-shrink-0">
               <a href="https://instagram.com/cfc_g6" target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-xl shadow hover:shadow-lg transition">
@@ -34,7 +33,7 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* FOOTER MOBILE (SM-) */}
+
       <footer className="bg-gray-50 border-t border-gray-300 py-6 block md:hidden">
         <div className="max-w-xs mx-auto flex flex-col items-center gap-3">
           <h4 className="font-bold text-base text-slate-900 mt-2">CFC Grupo G6</h4>
@@ -52,7 +51,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-1 mt-1">
             <i className="ri-time-line text-base text-slate-600" />
-            <span className="text-xs text-slate-600">Seg-Sex 8h às 18h</span>
+            <span className="text-xs text-slate-600">Seg-Sex 9h às 18h</span>
           </div>
         </div>
         <div className="mt-4 border-t border-gray-300 pt-3 text-center text-xs text-slate-500">

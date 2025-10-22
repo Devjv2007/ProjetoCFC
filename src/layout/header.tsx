@@ -83,7 +83,6 @@ export default function Header({ }: HeaderProps) {
           >
             <nav className="rounded-b-lg border-t bg-white shadow-lg">
               <ul className="flex flex-col">
-                <li><a onClick={() => setOpen(false)} href="#cursos" className="block px-4 py-3 hover:bg-slate-50">Cursos</a></li>
                 <li><a onClick={() => setOpen(false)} href="#servicos" className="block px-4 py-3 hover:bg-slate-50">Serviços</a></li>
                 <li><a onClick={() => setOpen(false)} href="#depoimentos" className="block px-4 py-3 hover:bg-slate-50">Depoimentos</a></li>
                 <li><a onClick={() => setOpen(false)} href="#porque" className="block px-4 py-3 hover:bg-slate-50">Porque</a></li>
