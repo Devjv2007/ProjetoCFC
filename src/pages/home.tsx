@@ -8,10 +8,8 @@ export default function CFCGrupoG6() {
 
 
   return (
-    <div className="min-h-screen bg-white">
-
-      <div className="h-20 md:h-[84px]" />
-      
+<div className="min-h-screen bg-white">
+  <div className="h-20 md:h-[84px]" />   
    <section id="inicio" className="relative min-h-[640px] md:min-h-[720px] overflow-hidden">
   <div
     aria-hidden="true"
@@ -40,35 +38,35 @@ export default function CFCGrupoG6() {
         <p className="mt-4 max-w-2xl text-white md:text-lg">
           Há mais de 20 anos formando condutores conscientes e preparados em Sorocaba, com credenciamento completo no DETRAN e equipe experiente.
         </p>
+        <div className="mt-6 sm:mt-8 flex flex-col items-start gap-3 w-full sm:w-96 md:w-[470px]">
+          <div className="w-full grid grid-cols-3 gap-2 sm:gap-3 text-white">
+            <div className="rounded-lg bg-white/10 backdrop-blur-md px-2 py-2 sm:px-3 sm:py-3 text-center">
+              <p className="text-xl sm:text-2xl font-extrabold tabular-nums">
+                1000+
+              </p>
+              <p className="text-xs text-blue-100 mt-1">Alunos formados</p>
+            </div>
+            
+            <div className="rounded-lg bg-white/10 backdrop-blur-md px-2 py-2 sm:px-3 sm:py-3 text-center">
+              <p className="text-xl sm:text-2xl font-extrabold tabular-nums">
+                100%
+              </p>
+              <p className="text-xs text-blue-100 mt-1">Credenciado DETRAN</p>
+            </div>
+            
+            <div className="rounded-lg bg-white/10 backdrop-blur-md px-2 py-2 sm:px-3 sm:py-3 text-center">
+              <p className="text-xl sm:text-2xl font-extrabold tabular-nums">
+                20+
+              </p>
+              <p className="text-xs text-blue-100 mt-1">Anos de tradição</p>
+            </div>
+          </div>
 
-
-       <div className="mt-8 flex gap-2 text-white flex-nowrap overflow-x-auto no-scrollbar">
-        <div className="rounded-lg bg-white/10 backdrop-blur-md px-4 py-4 min-w-[140px] text-center flex-shrink-0">
-          <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
-            1000+
-          </p>
-          <p className="text-sm text-blue-100">Alunos formados</p>
-        </div>
-        <div className="rounded-lg bg-white/10 backdrop-blur-md px-3 py-4 min-w-[140px] text-center flex-shrink-0">
-          <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
-            100%
-          </p>
-          <p className="text-sm text-blue-100">Credenciado DETRAN</p>
-        </div>
-        <div className="rounded-lg bg-white/10 backdrop-blur-md px-1 py-4 min-w-[140px] text-center flex-shrink-0">
-          <p className="w-[120px] max-w-[120px] min-w-[120px] text-3xl font-extrabold tabular-nums text-center mx-auto">
-            20+
-          </p>
-          <p className="text-sm text-blue-100">Anos de tradição</p>
-        </div>
-      </div>
-
-        <div className="mt-16 flex flex-col items-start gap-4 w-[470px]">
           <a
             href={`https://api.whatsapp.com/send/?phone=1532243868&text=Ol%C3%A1%21+Quero%20saber%20sobre%20os%20cursos%20do%20CFC%20G6.%20Vim%20pelo%20site.&type=phone_number&app_absent=0`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-12 py-4 font-semibold text-white transition hover:bg-white/10"
+            className="w-full inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-6 sm:px-8 md:px-12 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition hover:bg-white/10"
           >
             Falar no WhatsApp
           </a>
@@ -77,15 +75,15 @@ export default function CFCGrupoG6() {
             href={`https://www.google.com/maps/search/?api=1&query=Leopoldo+Machado+40+Sorocaba`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center rounded-lg  bg-blue-500 px-12 py-4 font-semibold text-white transition hover:bg-blue-600"
+            className="w-full inline-flex items-center justify-center rounded-lg bg-blue-500 px-6 sm:px-8 md:px-12 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition hover:bg-blue-600"
           >
             Nosso Endereço
           </a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+              </div>
+            </div>
+          </div>
+        </section>
 
       <section
         ref={servicosRef}
