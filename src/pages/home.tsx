@@ -42,7 +42,7 @@ export default function CFCGrupoG6() {
           <div className="w-full grid grid-cols-3 gap-2 sm:gap-3 text-white">
             <div className="rounded-lg bg-white/10 backdrop-blur-md px-2 py-2 sm:px-3 sm:py-3 text-center">
               <p className="text-xl sm:text-2xl font-extrabold tabular-nums">
-                1000+
+                10000+
               </p>
               <p className="text-xs text-blue-100 mt-1">Alunos formados</p>
             </div>
@@ -66,7 +66,7 @@ export default function CFCGrupoG6() {
             href={`https://api.whatsapp.com/send/?phone=1532243868&text=Ol%C3%A1%21+Quero%20saber%20sobre%20os%20cursos%20do%20CFC%20G6.%20Vim%20pelo%20site.&type=phone_number&app_absent=0`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center rounded-lg border border-white/70 bg-transparent px-6 sm:px-8 md:px-12 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition hover:bg-white/10"
+            className="w-full inline-flex items-center justify-center rounded-lg border bg-green-500 px-6 sm:px-8 md:px-12 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition hover:bg-green-600"
           >
             Falar no WhatsApp
           </a>
@@ -75,7 +75,7 @@ export default function CFCGrupoG6() {
             href={`https://www.google.com/maps/search/?api=1&query=Leopoldo+Machado+40+Sorocaba`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center rounded-lg bg-blue-500 px-6 sm:px-8 md:px-12 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition hover:bg-blue-600"
+            className="w-full inline-flex items-center justify-center rounded-lg border bg-blue-500 px-6 sm:px-8 md:px-12 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition hover:bg-blue-600"
           >
             Nosso Endereço
           </a>
@@ -218,8 +218,8 @@ export default function CFCGrupoG6() {
         ].join(" ")}
       >
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-7xl">
-            <div className="text-center mb-10">
+          <div className="mx-auto max-w-7xl ">
+            <div className="text-center mb-10 ">
               <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900">
                 Depoimentos de nossos
                 <span className="text-3xl md:text-5xl font-extrabold text-blue-700"> Alunos</span>
@@ -227,13 +227,13 @@ export default function CFCGrupoG6() {
               <p className="mt-2 text-slate-600">Experiências de quem já passou por aqui</p>
             </div>
 
-            <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-4 ">
               <article className="relative rounded-3xl overflow-hidden shadow-xl  p-2">
-                <div className="rounded-2xl overflow-hidden">
+                <div className="rounded-2xl overflow-hidden ">
                   <img
                     src="Depoimento1.png"
                     alt="Depoimento 1"
-                    className="w-full h-auto md:h-50 "
+                    className="w-full h-auto md:h-50  "
                   />
                 </div>
               </article>

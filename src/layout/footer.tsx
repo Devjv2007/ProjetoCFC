@@ -12,8 +12,10 @@ export default function Footer() {
           </div>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex items-center space-x-2 flex-shrink-0">
-              <i className="ri-time-line text-lg" />
-              <span className="text-sm text-slate-600">Segunda a Sexta 9h às 18h</span>
+              <i className="text-lg" />
+               <span className="text-sm text-slate-600"><span className="ri-whatsapp-line px-1"></span>(15) 3224 3868</span>
+               <span className="text-sm text-slate-600"><span className="ri-whatsapp-line px-1"></span>(15) 99104 7579</span>
+              <span className="text-sm text-slate-600"><span className="ri-time-line px-1  "></span>Segunda a Sexta 9h às 18h</span>
             </div>
             <div className="flex space-x-4 flex-shrink-0">
               <a href="https://instagram.com/cfc_g6" target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-xl shadow hover:shadow-lg transition">
@@ -49,9 +51,11 @@ export default function Footer() {
               <i className="ri-whatsapp-line" />
             </a>
           </div>
-          <div className="flex items-center gap-1 mt-1">
-            <i className="ri-time-line text-base text-slate-600" />
-            <span className="text-xs text-slate-600">Seg-Sex 9h às 18h</span>
+          <div className="flex flex-col gap-1 mt-1">
+            <i className="text-base text-slate-600" />
+            <span className="text-sm text-slate-600"><span className="ri-whatsapp-line px-1"></span>(15) 3224 3868</span>
+               <span className="text-sm text-slate-600"><span className="ri-whatsapp-line px-1"></span>(15) 99104 7579</span>
+              <span className="text-sm text-slate-600 "><span className="ri-time-line px-1"></span>Segunda a Sexta 9h às 18h</span>
           </div>
         </div>
         <div className="mt-4 border-t border-gray-300 pt-3 text-center text-xs text-slate-500">

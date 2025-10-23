@@ -70,7 +70,7 @@ export default function Header({ }: HeaderProps) {
             <button
               onClick={() => setOpen(false)}
               aria-label="Fechar menu"
-              className="fixed inset-0 z-40 bg-black/10 md:hidden"
+              className="fixed inset-0 z-40 bg- md:hidden"
             />
           )}
           <div
@@ -78,10 +78,10 @@ export default function Header({ }: HeaderProps) {
             className={[
               "fixed left-0 right-0 top-20 z-50 md:hidden",
               "transform origin-top transition-[opacity,transform] duration-200 ease-out",
-              open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+              open ? " translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
             ].join(" ")}
           >
-            <nav className="rounded-b-lg border-t bg-white shadow-lg">
+            <nav className="rounded-b-lg  bg-white shadow-lg">
               <ul className="flex flex-col">
                 <li><a onClick={() => setOpen(false)} href="#servicos" className="block px-4 py-3 hover:bg-slate-50">Serviços</a></li>
                 <li><a onClick={() => setOpen(false)} href="#depoimentos" className="block px-4 py-3 hover:bg-slate-50">Depoimentos</a></li>
